@@ -27,6 +27,7 @@ public class OVRGrabber : MonoBehaviour
     public float grabBegin = 0.55f;
     public float grabEnd = 0.35f;
     public GameObject Sonido;
+    public GameObject Animacion;
 
     // Demonstrates parenting the held object to the hand's transform when grabbed.
     // When false, the grabbed object is moved every FixedUpdate using MovePosition.
@@ -200,6 +201,11 @@ public class OVRGrabber : MonoBehaviour
         {
             AudioSource A = Sonido.GetComponent<AudioSource>();
             A.volume -= 0.1f;
+        }
+
+        if (grabbable.name == "ObjetoZanahoria")
+        {
+            Animacion.SetActive(true);
         }
         // Add the grabbable
         int refCount = 0;
