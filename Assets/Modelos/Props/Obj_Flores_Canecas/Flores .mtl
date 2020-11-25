@@ -1,0 +1,35 @@
+# Blender MTL File: 'Visualizacion - copia.blend'
+# Material Count: 3
+
+newmtl Atlas_Flores
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\usuario\\Desktop\\Trabajo\\Proyecto_Plaza\\Modelado\\Flores\\Atlas_Flores.jpg
+
+newmtl Atlas_Flores.003
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\usuario\\Desktop\\Trabajo\\Proyecto_Plaza\\Modelado\\Flores\\Atlas_Flores.jpg
+
+newmtl T_Frutas_2
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\usuario\\Desktop\\Trabajo\\Proyecto_Plaza\\Modelado\\Objs\\Frutas_Verduras\\Food_video compilot\\Fresh_Food_maps\\Atlas_2.png
