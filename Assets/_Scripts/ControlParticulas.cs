@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ControlParticulas : MonoBehaviour
 {
+    public AudioSpectrum Aspectrum;
     public ParticleSystem ps;
     public float multiplicador;
     public float speed = 1;
@@ -18,7 +19,7 @@ public class ControlParticulas : MonoBehaviour
 
     void Update()
     {
-        velocidad = AudioSpectrum.amplitudeBuffer * multiplicador;
+        velocidad = Aspectrum.amplitudeBuffer * multiplicador;
 
         main.simulationSpeed = velocidad;
         main.startSpeed = speed;

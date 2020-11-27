@@ -5,7 +5,14 @@ using UnityEngine;
 public class SonidosInicio : MonoBehaviour
 {
     private float speed;
-    public AudioSource[] Sonidos;
+    [System.Serializable]
+    public class ComboSonidos
+    {
+        public AudioSource sonido;
+        public ParticleSystem particulas;
+    }
+    public ComboSonidos[] combos;
+    //public AudioSource[] Sonidos;
 
     float SoundBegin = 2;
     bool Tr2 = true;
@@ -14,6 +21,18 @@ public class SonidosInicio : MonoBehaviour
     bool Tr4 = true;
     bool Tr5 = true;
     bool Act = true;
+
+    /*private void Awake()
+    {
+        for (int i = 0; i < combos.Length; i++)
+        {
+            if (combos[i].particulas != null)
+            {
+                combos[i].particulas.SetActive(false);
+            }
+        }
+    }*/
+
     private void Update()
     {
         if (Tr)
@@ -27,7 +46,7 @@ public class SonidosInicio : MonoBehaviour
                 SoundBegin = 0;
                 if(SoundBegin == 0 && Act == true)
                 {
-                    StartCoroutine(ChangeSpeed(0f, 0.7f, 15f, Sonidos[0]));
+                    StartCoroutine(ChangeSpeed(0f, 0.7f, 15f, combos[0].sonido));
                     SoundBegin = -1;
                 }
                 Tr= false;
@@ -35,27 +54,43 @@ public class SonidosInicio : MonoBehaviour
         }
 
  
-        if(Sonidos[0].volume == 0.7f && Tr2)
+        if(combos[0].sonido.volume == 0.7f && Tr2)
         {
-            StartCoroutine(ChangeSpeed(0f, 1f, 5, Sonidos[1]));
+            if (combos[1].particulas != null)
+            {
+                combos[1].particulas.Play();
+            }
+            StartCoroutine(ChangeSpeed(0f, 1f, 5, combos[1].sonido));
             Tr2=false;
         }
 
-        if (Sonidos[1].volume >= 0.5f && Tr3)
+        if (combos[1].sonido.volume >= 0.5f && Tr3)
         {
-            StartCoroutine(ChangeSpeed(0f, 1f, 5, Sonidos[2]));
+            if (combos[2].particulas != null)
+            {
+                combos[2].particulas.Play();
+            }
+            StartCoroutine(ChangeSpeed(0f, 1f, 5, combos[2].sonido));
             Tr3 = false;
         }
 
-        if (Sonidos[2].volume >= 0.5f && Tr4)
+        if (combos[2].sonido.volume >= 0.5f && Tr4)
         {
-            StartCoroutine(ChangeSpeed(0f, 1f, 8, Sonidos[3]));
+            if (combos[3].particulas != null)
+            {
+                combos[3].particulas.Play();
+            }
+            StartCoroutine(ChangeSpeed(0f, 1f, 8, combos[3].sonido));
             Tr4 = false;
         }
 
-        if (Sonidos[3].volume >= 0.5f && Tr5)
+        if (combos[3].sonido.volume >= 0.5f && Tr5)
         {
-            StartCoroutine(ChangeSpeed(0f, 0.7f, 8, Sonidos[4]));
+            if (combos[4].particulas != null)
+            {
+                combos[4].particulas.Play();
+            }
+            StartCoroutine(ChangeSpeed(0f, 0.7f, 8, combos[4].sonido));
             Tr5 = false;
         }
     }
@@ -76,7 +111,7 @@ public class SonidosInicio : MonoBehaviour
 
     public void BajarRadio()
     {
-        StartCoroutine(ChangeSpeed(1, 0, 5, Sonidos[1]));
-        if(Sonidos[1].volume <= 0.4) { Tr3 = false;  Tr2 = false; }
+        StartCoroutine(ChangeSpeed(1, 0, 5, combos[1].sonido));
+        if(combos[1].sonido.volume <= 0.4) { Tr3 = false;  Tr2 = false; }
     }
 }

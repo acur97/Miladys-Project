@@ -6,12 +6,12 @@ using UnityEngine;
 public class AudioSpectrum : MonoBehaviour {
 
     AudioSource source;
-    public static float[] sample = new float[512];
-    public static float[] freqBand = new float[8];
-    public static float[] bandBuffer = new float[8];
+    private float[] sample = new float[512];
+    private float[] freqBand = new float[8];
+    private float[] bandBuffer = new float[8];
     private float[] bufferDecrease = new float[8];
 
-    public static float amplitude, amplitudeBuffer;
+    public float amplitude, amplitudeBuffer;
     public float tiempoBajada;
     public float amplitudeHighest;
 
@@ -36,6 +36,32 @@ public class AudioSpectrum : MonoBehaviour {
     void GetSpectrum()
     {
         source.GetSpectrumData(sample, 0, FFTWindow.Blackman);
+    }
+
+    void MakeFrequencyBands()
+    {
+        int count = 0;
+
+        for (int i = 0; i < 8; i++)
+        {
+            float average = 0;
+            int sampleCount = (int)Mathf.Pow(2, i) * 2;
+
+            if (i == 7)
+            {
+                sampleCount += 2;
+            }
+
+            for (int j = 0; j < sampleCount; j++)
+            {
+                average += sample[count] * (count + 1);
+                count++;
+            }
+
+            average /= count;
+
+            freqBand[i] = average * 10;
+        }
     }
 
     void BandBuffer()
@@ -73,31 +99,5 @@ public class AudioSpectrum : MonoBehaviour {
 
         amplitude = currentAmplitude / amplitudeHighest;
         amplitudeBuffer = currentAmplitudeBuffer / amplitudeHighest;
-    }
-
-    void MakeFrequencyBands()
-    {
-        int count = 0;
-
-        for (int i = 0; i < 8; i++)
-        {
-            float average = 0;
-            int sampleCount = (int)Mathf.Pow(2, i) * 2;
-
-            if (i == 7)
-            {
-                sampleCount += 2;
-            }
-
-            for (int j = 0; j < sampleCount; j++)
-            {
-                average += sample[count] * (count + 1);
-                count++;
-            }
-
-            average /= count;
-
-            freqBand[i] = average * 10;
-        }
     }
 }

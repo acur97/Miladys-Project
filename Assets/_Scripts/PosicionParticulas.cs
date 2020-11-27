@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PosicionParticulas : MonoBehaviour
 {
+    public AudioSpectrum Aspectrum;
     private Transform ps;
     public float multiplicador;
 
@@ -14,9 +15,9 @@ public class PosicionParticulas : MonoBehaviour
         ps = transform;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        velocidad = AudioSpectrum.amplitudeBuffer * multiplicador;
+        velocidad = Aspectrum.amplitudeBuffer * multiplicador;
 
         ps.localPosition = new Vector3(0, 0, velocidad);
     }
