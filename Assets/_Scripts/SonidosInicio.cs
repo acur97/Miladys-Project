@@ -16,7 +16,7 @@ public class SonidosInicio : MonoBehaviour
     public GameObject Tutorial;
     //public AudioSource[] Sonidos;
 
-    float SoundBegin = 2;
+    float SoundBegin = 10;
     float Megatimer = 10;
     bool Tr2 = true;
     bool Tr = true;
@@ -25,7 +25,8 @@ public class SonidosInicio : MonoBehaviour
     bool Tr5 = true;
     bool Act = true;
     bool Tr6 = true;
-    bool flag;
+    bool flag = true;
+    bool Conv = true;
 
     /*private void Awake()
     {
@@ -135,6 +136,17 @@ public class SonidosInicio : MonoBehaviour
     public void BajarGeneral()
     {
         combos[0].sonido.volume -= 0.2f;
+    }
+
+    public void ActivarConversacion()
+    {
+        
+        if (Conv)
+        {
+            combos[5].sonido.Play();
+            StartCoroutine(ChangeSpeed(1, 0, 50, combos[5].sonido));
+        }
+   
     }
 
     public void ActivarMegafono()
