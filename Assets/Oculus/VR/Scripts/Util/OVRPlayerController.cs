@@ -26,9 +26,8 @@ public class OVRPlayerController : MonoBehaviour
 	/// The rate acceleration during movement.
 	/// </summary>
 	public float Acceleration = 0.1f;
-	public Image Instrucciones;
-	public Sprite Change;
-	bool[] Ins;
+	public GameObject[] Instrucciones;
+	bool Ins;
 	public Animator Ilum1;
 	public GameObject Tutorial;
 
@@ -163,9 +162,8 @@ public class OVRPlayerController : MonoBehaviour
 		var p = CameraRig.transform.localPosition;
 		p.z = OVRManager.profile.eyeDepth;
 		CameraRig.transform.localPosition = p;
-		Ins[0] = true;
-		Ins[1] = true;
-		Ins[2] = true;
+		Ins= true;
+
 	}
 
 	void Awake()
@@ -350,15 +348,15 @@ public class OVRPlayerController : MonoBehaviour
 
 			// Hack Instrucciones
 
-			if (OVRInput.Get(OVRInput.Button.One) && Ins[0]){
-
-				Instrucciones.GetComponent<SpriteRenderer>().sprite = Change;
-				Ins[0] = false;
+			if (OVRInput.Get(OVRInput.Button.One) && Ins == true){
+				Instrucciones[0].SetActive(false);
+				Instrucciones[1].SetActive(true);
+				Ins = false;
 			}
 
-			if (OVRInput.Get(OVRInput.Button.One) && Ins[0] == false)
+			if (OVRInput.Get(OVRInput.Button.One) && Ins == false)
 			{
-				Instrucciones.gameObject.SetActive(false);
+				Instrucciones[1].SetActive(false);
 				Tutorial.SetActive(true);
 				Ilum1.SetBool("Agua", true);
 			}
