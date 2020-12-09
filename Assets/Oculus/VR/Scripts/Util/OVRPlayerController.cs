@@ -14,6 +14,7 @@ permissions and limitations under the License.
 
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Controls the player's movement in virtual reality.
@@ -25,6 +26,11 @@ public class OVRPlayerController : MonoBehaviour
 	/// The rate acceleration during movement.
 	/// </summary>
 	public float Acceleration = 0.1f;
+	public Image Instrucciones;
+	public Sprite Change;
+	bool[] Ins;
+	public Animator Ilum1;
+	public GameObject Tutorial;
 
 	/// <summary>
 	/// The rate of damping on movement.
@@ -157,6 +163,9 @@ public class OVRPlayerController : MonoBehaviour
 		var p = CameraRig.transform.localPosition;
 		p.z = OVRManager.profile.eyeDepth;
 		CameraRig.transform.localPosition = p;
+		Ins[0] = true;
+		Ins[1] = true;
+		Ins[2] = true;
 	}
 
 	void Awake()
@@ -337,6 +346,21 @@ public class OVRPlayerController : MonoBehaviour
 			{
 				moveBack = true;
 				dpad_move = true;
+			}
+
+			// Hack Instrucciones
+
+			if (OVRInput.Get(OVRInput.Button.One) && Ins[0]){
+
+				Instrucciones.GetComponent<SpriteRenderer>().sprite = Change;
+				Ins[0] = false;
+			}
+
+			if (OVRInput.Get(OVRInput.Button.One) && Ins[0] == false)
+			{
+				Instrucciones.gameObject.SetActive(false);
+				Tutorial.SetActive(true);
+				Ilum1.SetBool("Agua", true);
 			}
 
 			MoveScale = 1.0f;

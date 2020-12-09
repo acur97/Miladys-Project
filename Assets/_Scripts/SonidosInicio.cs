@@ -13,10 +13,10 @@ public class SonidosInicio : MonoBehaviour
     }
     public GameObject[] Interactuables;
     public ComboSonidos[] combos;
-    public GameObject Tutorial;
+
     //public AudioSource[] Sonidos;
 
-    float SoundBegin = 10;
+    float SoundBegin = 5;
     float Megatimer = 10;
     bool Tr2 = true;
     bool Tr = true;
@@ -28,6 +28,7 @@ public class SonidosInicio : MonoBehaviour
     bool flag = true;
     bool Conv = true;
 
+
     /*private void Awake()
     {
         for (int i = 0; i < combos.Length; i++)
@@ -38,6 +39,8 @@ public class SonidosInicio : MonoBehaviour
             }
         }
     }*/
+
+ 
 
     private void Update()
     {
@@ -52,7 +55,7 @@ public class SonidosInicio : MonoBehaviour
                 SoundBegin = 0;
                 if(SoundBegin == 0 && Act == true)
                 {
-                    StartCoroutine(ChangeSpeed(0f, 1f, 15f, combos[0].sonido));
+                    StartCoroutine(ChangeSpeed(0f, 1f, 10f, combos[0].sonido));
                     SoundBegin = -1;
                 }
                 Tr= false;
@@ -113,6 +116,7 @@ public class SonidosInicio : MonoBehaviour
 
     }
 
+
     IEnumerator ChangeSpeed(float v_start, float v_end, float duration ,AudioSource _Sonidos)
     {
         float elapsed = 0.0f;
@@ -138,11 +142,24 @@ public class SonidosInicio : MonoBehaviour
         combos[0].sonido.volume -= 0.2f;
     }
 
+    public void BajarPlaza2()
+    {           
+        combos[2].sonido.volume -= 0.2f;
+    }
+
+    public void BajarLicuadora()
+    {
+        AudioSource X = Interactuables[1].GetComponent<AudioSource>();
+        X.volume -= 0.2f;
+        
+    }
+
     public void ActivarConversacion()
     {
         
         if (Conv)
         {
+            Conv = false;
             combos[5].sonido.Play();
             StartCoroutine(ChangeSpeed(1, 0, 50, combos[5].sonido));
         }
@@ -151,18 +168,8 @@ public class SonidosInicio : MonoBehaviour
 
     public void ActivarMegafono()
     {   
-        if (flag)
-        {
-            if (Megatimer > 0)
-            {
-                Megatimer -= Time.deltaTime;
-            }
-            else
-            {
-                Megatimer = 0;
-                if(Megatimer==0) Interactuables[5].SetActive(true);
-            }
-            flag = false;
-        }
+        
+        Interactuables[5].SetActive(true);
+   
     }
 }
