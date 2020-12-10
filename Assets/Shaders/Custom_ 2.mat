@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_SpherePoint
+  m_Name: Custom_ 2
   m_Shader: {fileID: 4800000, guid: 094683f2cd5cc174181587fcbf20d9e9, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

@@ -42,7 +42,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Texture: {fileID: 2800000, guid: c180420ff42b768439395b76bdfebfa1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -92,7 +92,7 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 5.992157, g: 5.992157, b: 5.992157, a: 1}
+    - _Color: {r: 2.9960785, g: 2.9960785, b: 2.9960785, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 4.0000005, g: 4.0000005, b: 4.0000005, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
