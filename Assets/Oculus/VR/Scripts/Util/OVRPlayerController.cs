@@ -357,8 +357,6 @@ public class OVRPlayerController : MonoBehaviour
 			if (OVRInput.Get(OVRInput.Button.Three))
 			{
 				Instrucciones[1].SetActive(false);
-				Tutorial.SetActive(true);
-				Ilum1.SetBool("Agua", true);
 			}
 
 			MoveScale = 1.0f;

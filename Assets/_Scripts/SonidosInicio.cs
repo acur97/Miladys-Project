@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SonidosInicio : MonoBehaviour
 {
@@ -14,8 +15,6 @@ public class SonidosInicio : MonoBehaviour
     public GameObject[] Interactuables;
     public ComboSonidos[] combos;
 
-    //public AudioSource[] Sonidos;
-
     float SoundBegin = 5;
     float Megatimer = 10;
     bool Tr2 = true;
@@ -28,107 +27,28 @@ public class SonidosInicio : MonoBehaviour
     bool flag = true;
     bool Conv = true;
 
-
-    /*private void Awake()
-    {
-        for (int i = 0; i < combos.Length; i++)
-        {
-            if (combos[i].particulas != null)
-            {
-                combos[i].particulas.SetActive(false);
-            }
-        }
-    }*/
-
- 
-
+  
     private void Update()
     {
-        if (Tr)
-        {
-            if (SoundBegin > 0)
-            {
-                SoundBegin -= Time.deltaTime;
-            }
-            else
-            {
-                SoundBegin = 0;
-                if(SoundBegin == 0 && Act == true)
-                {
-                    StartCoroutine(ChangeSpeed(0f, 1f, 10f, combos[0].sonido));
-                    SoundBegin = -1;
-                }
-                Tr= false;
-            }
-        }
-
-
-        if (combos[0].sonido.volume >= 0.7f && Tr2)
-        {
-            if (combos[1].particulas != null)
-            {
-                combos[1].particulas.Play();
-            }
-            StartCoroutine(ChangeSpeed(0f, 1f, 5, combos[1].sonido));
-            Tr2=false;
-        }
-
-        if (combos[1].sonido.volume >= 0.5f && Tr3)
-        {
-            if (combos[2].particulas != null)
-            {
-                combos[2].particulas.Play();
-            }
-            StartCoroutine(ChangeSpeed(0f, 1f, 5, combos[2].sonido));
-            Tr3 = false;
-        }
-
-        if (combos[2].sonido.volume >= 0.5f && Tr4)
-        {
-            if (combos[3].particulas != null)
-            {
-                combos[3].particulas.Play();
-            }
-            StartCoroutine(ChangeSpeed(0f, 1f, 8, combos[3].sonido));
-            Tr4 = false;
-        }
-
-        if (combos[3].sonido.volume >= 0.5f && Tr5)
-        {
-            if (combos[4].particulas != null)
-            {
-                combos[4].particulas.Play();
-            }
-            StartCoroutine(ChangeSpeed(0f, 0.7f, 8, combos[4].sonido));
-            Tr5 = false;
-        }
-
-
-        if (combos[4].sonido.volume >= 0.5 && Tr6)
-        {
-            for (int i = 0; i <=4 ; i++)
-            {
-                Interactuables[i].SetActive(true);
-            }
-            Tr6 = false;
-        }
-
 
     }
 
 
-    IEnumerator ChangeSpeed(float v_start, float v_end, float duration ,AudioSource _Sonidos)
+   public  IEnumerator ChangeSpeed(float v_start, float v_end, float duration ,AudioSource _Sonidos)
     {
-        float elapsed = 0.0f;
-        while (elapsed < duration)
+        if (_Sonidos != null)
         {
-            speed = Mathf.Lerp(v_start, v_end, elapsed / duration);
-            elapsed += Time.deltaTime;
+            float elapsed = 0.0f;
+            while (elapsed < duration)
+            {
+                speed = Mathf.Lerp(v_start, v_end, elapsed / duration);
+                elapsed += Time.deltaTime;
+                _Sonidos.volume = speed;
+                yield return null;
+            }
+            speed = v_end;
             _Sonidos.volume = speed;
-            yield return null;
         }
-        speed = v_end;
-        _Sonidos.volume = speed;
     }
 
     public void BajarRadio()
@@ -172,4 +92,15 @@ public class SonidosInicio : MonoBehaviour
         Interactuables[5].SetActive(true);
    
     }
+
+
+    public void ActivarSonidos(int Activate)
+    {
+        if(Interactuables[Activate]!= null)
+        {
+            Interactuables[Activate].SetActive(true);
+        }
+     
+    }
+
 }
