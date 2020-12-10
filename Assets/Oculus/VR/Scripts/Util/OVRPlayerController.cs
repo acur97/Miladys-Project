@@ -15,6 +15,7 @@ permissions and limitations under the License.
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controls the player's movement in virtual reality.
@@ -357,7 +358,14 @@ public class OVRPlayerController : MonoBehaviour
 			if (OVRInput.Get(OVRInput.Button.Three))
 			{
 				Instrucciones[1].SetActive(false);
+				Tutorial.SetActive(true);
 			}
+
+			if (OVRInput.Get(OVRInput.Button.Four))
+			{
+				SceneManager.LoadScene(1);
+			}
+
 
 			MoveScale = 1.0f;
 

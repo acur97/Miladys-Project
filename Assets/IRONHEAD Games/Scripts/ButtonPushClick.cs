@@ -56,9 +56,6 @@ public class ButtonPushClick : MonoBehaviour
         GetComponent<Collider>().isTrigger = true;
         Manager.ActivarSonidos(Objetos);
         Manager.StartCoroutine(Manager.ChangeSpeed(0f, 1f, 10f, Manager.combos[Bases].sonido));
-
-
-
     }
 
 

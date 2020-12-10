@@ -30,7 +30,7 @@ public class SonidosInicio : MonoBehaviour
   
     private void Update()
     {
-
+         
     }
 
 
@@ -64,7 +64,12 @@ public class SonidosInicio : MonoBehaviour
 
     public void BajarPlaza2()
     {           
-        combos[2].sonido.volume -= 0.2f;
+        combos[2].sonido.volume -= 0.31f;
+    }
+
+    public void BajarPlaza1()
+    {
+        combos[1].sonido.volume -= 0.31f;
     }
 
     public void BajarLicuadora()
@@ -100,7 +105,27 @@ public class SonidosInicio : MonoBehaviour
         {
             Interactuables[Activate].SetActive(true);
         }
-     
     }
 
+
+    public void ActivarObjetos()
+    {
+        for (int i = 0; i < Interactuables.Length; i++)
+        {
+            Interactuables[i].SetActive(true);
+        }
+    }
+
+    public void SecuenciaPlaza()
+    {
+        if (Tr2)
+        {
+            StartCoroutine(ChangeSpeed(0, 1, 25, combos[0].sonido));
+            StartCoroutine(ChangeSpeed(.5f, 1, 15, combos[1].sonido));
+            StartCoroutine(ChangeSpeed(.5f, 1, 25, combos[2].sonido));
+            StartCoroutine(ChangeSpeed(.5f, 1, 15, combos[3].sonido));
+            StartCoroutine(ChangeSpeed(.5f, 1, 10, combos[4].sonido));
+            Tr2 = false;
+        }
+    }
 }
