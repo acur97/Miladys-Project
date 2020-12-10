@@ -348,13 +348,13 @@ public class OVRPlayerController : MonoBehaviour
 
 			// Hack Instrucciones
 
-			if (OVRInput.Get(OVRInput.Button.One) && Ins == true){
+			if (OVRInput.Get(OVRInput.Button.One)){
 				Instrucciones[0].SetActive(false);
 				Instrucciones[1].SetActive(true);
 				Ins = false;
 			}
 
-			if (OVRInput.Get(OVRInput.Button.One) && Ins == false)
+			if (OVRInput.Get(OVRInput.Button.Three))
 			{
 				Instrucciones[1].SetActive(false);
 				Tutorial.SetActive(true);

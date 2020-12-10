@@ -18396,6 +18396,10 @@ PrefabInstance:
       propertyPath: Instrucciones.Array.data[1]
       value: 
       objectReference: {fileID: 1661057014}
+    - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: Ilum1
+      value: 
+      objectReference: {fileID: 1159843539}
     - target: {fileID: 11400020, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: useFixedUpdateForTracking
       value: 1
