@@ -16,6 +16,12 @@ public class EscalaParticulas : MonoBehaviour
     private void Update()
     {
         valor = (_base + (aSpectrum.amplitudeBuffer * multiplicador)) * aSource.volume;
+
+        if (float.IsNaN(valor))
+        {
+            valor = 0;
+        }
+
         esfera.localScale = new Vector3(valor, valor, valor);
         var sh = ps.shape;
         var mn = ps.main;

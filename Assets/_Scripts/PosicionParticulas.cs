@@ -19,6 +19,11 @@ public class PosicionParticulas : MonoBehaviour
     {
         velocidad = Aspectrum.amplitudeBuffer * multiplicador;
 
+        if (float.IsNaN(velocidad))
+        {
+            velocidad = 0;
+        }
+
         ps.localPosition = new Vector3(0, 0, velocidad);
     }
 }
