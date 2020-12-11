@@ -32224,6 +32224,9 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.48825645, y: 0.44323564, z: 0.00042260188}
   m_Center: {x: -0.089403726, y: 0.102554865, z: 0.0007909131}
+<<<<<<< HEAD
+>>>>>>> parent of be003f1... Nueva Escena
+=======
 >>>>>>> parent of be003f1... Nueva Escena
 --- !u!1 &644721711
 GameObject:
@@ -37100,6 +37103,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
   m_projectionMatrixMode: 1
@@ -37231,6 +37235,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &674996024
 =======
+=======
+>>>>>>> parent of be003f1... Nueva Escena
   m_Modification:
     m_TransformParent: {fileID: 2077248089}
     m_Modifications:
@@ -37433,6 +37439,9 @@ Transform:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
 --- !u!4 &675120561 stripped
+<<<<<<< HEAD
+>>>>>>> parent of be003f1... Nueva Escena
+=======
 >>>>>>> parent of be003f1... Nueva Escena
 Transform:
   m_CorrespondingSourceObject: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd,
@@ -37453,6 +37462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &675120564 stripped
 Transform:
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37544,6 +37554,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
+=======
+  m_CorrespondingSourceObject: {fileID: 400012, guid: ce816f2e6abb0504092c23ed9b970dfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 675120560}
+>>>>>>> parent of be003f1... Nueva Escena
 =======
   m_CorrespondingSourceObject: {fileID: 400012, guid: ce816f2e6abb0504092c23ed9b970dfd,
     type: 3}
@@ -37644,7 +37659,11 @@ MonoBehaviour:
   _aoShader: {fileID: 4800000, guid: 7541b5f18b1224a81927d8b1184b122b, type: 3}
   _quadMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &675221938
+=======
+--- !u!1 &677330110
+>>>>>>> parent of be003f1... Nueva Escena
 =======
 --- !u!1 &677330110
 >>>>>>> parent of be003f1... Nueva Escena
@@ -37656,14 +37675,20 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 674939474}
   m_Layer: 0
   m_Name: LeftHandAnchor
 =======
+=======
+>>>>>>> parent of be003f1... Nueva Escena
   - component: {fileID: 677330111}
   - component: {fileID: 677330112}
   m_Layer: 0
   m_Name: Directional Light
+<<<<<<< HEAD
+>>>>>>> parent of be003f1... Nueva Escena
+=======
 >>>>>>> parent of be003f1... Nueva Escena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37671,8 +37696,13 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &675252298
 GameObject:
+=======
+--- !u!4 &677330111
+Transform:
+>>>>>>> parent of be003f1... Nueva Escena
 =======
 --- !u!4 &677330111
 Transform:
@@ -37681,6 +37711,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   serializedVersion: 6
   m_Component:
@@ -37695,6 +37726,8 @@ Transform:
 --- !u!1 &675282082
 GameObject:
 =======
+=======
+>>>>>>> parent of be003f1... Nueva Escena
   m_GameObject: {fileID: 677330110}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 5, z: 0}
@@ -37705,6 +37738,7 @@ GameObject:
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!108 &677330112
 Light:
+<<<<<<< HEAD
 >>>>>>> parent of be003f1... Nueva Escena
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37819,10 +37853,13 @@ MonoBehaviour:
   LateControllerUpdate: 1
 --- !u!114 &680556282
 MonoBehaviour:
+=======
+>>>>>>> parent of be003f1... Nueva Escena
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 675021592}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -37894,6 +37931,8 @@ MonoBehaviour:
   fadeOnStart: 1
   renderQueue: 5000
 =======
+=======
+>>>>>>> parent of be003f1... Nueva Escena
   m_GameObject: {fileID: 677330110}
   m_Enabled: 1
   serializedVersion: 10
@@ -37949,6 +37988,9 @@ MonoBehaviour:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+<<<<<<< HEAD
+>>>>>>> parent of be003f1... Nueva Escena
+=======
 >>>>>>> parent of be003f1... Nueva Escena
 --- !u!1 &683175113 stripped
 GameObject:
@@ -62735,7 +62777,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_TransformParent: {fileID: 987101223}
+=======
+    m_TransformParent: {fileID: 675120563}
+>>>>>>> parent of be003f1... Nueva Escena
 =======
     m_TransformParent: {fileID: 675120563}
 >>>>>>> parent of be003f1... Nueva Escena
@@ -62986,7 +63032,11 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Camera: {fileID: 987101228}
+=======
+  m_Camera: {fileID: 675120568}
+>>>>>>> parent of be003f1... Nueva Escena
 =======
   m_Camera: {fileID: 675120568}
 >>>>>>> parent of be003f1... Nueva Escena
@@ -81302,7 +81352,10 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of be003f1... Nueva Escena
 --- !u!1001 &1488617380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82506,7 +82559,11 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Camera: {fileID: 987101228}
+=======
+  m_Camera: {fileID: 675120568}
+>>>>>>> parent of be003f1... Nueva Escena
 =======
   m_Camera: {fileID: 675120568}
 >>>>>>> parent of be003f1... Nueva Escena
@@ -83344,7 +83401,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_TransformParent: {fileID: 987101222}
+=======
+    m_TransformParent: {fileID: 675120562}
+>>>>>>> parent of be003f1... Nueva Escena
 =======
     m_TransformParent: {fileID: 675120562}
 >>>>>>> parent of be003f1... Nueva Escena
