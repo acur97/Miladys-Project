@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/Main.unity
     guid: dd3a6681130b8734d8001b9feef7e44b
   - enabled: 1
-    path: Assets/_Scenes/SonidosBotones.unity
+    path: "Assets/_Scenes/Selecci\xF3n.unity"
     guid: eda39daeb1b8bb243b0e2c8f71c8b715
   m_configObjects: {}
