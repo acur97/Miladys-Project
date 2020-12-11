@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Main.unity
     guid: dd3a6681130b8734d8001b9feef7e44b
+<<<<<<< HEAD
+=======
+  - enabled: 1
+    path: Assets/_Scenes/SonidosBotones.unity
+    guid: eda39daeb1b8bb243b0e2c8f71c8b715
+>>>>>>> parent of be003f1... Nueva Escena
   m_configObjects: {}
