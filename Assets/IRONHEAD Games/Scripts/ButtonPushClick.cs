@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class ButtonPushClick : MonoBehaviour
 {
     public int Bases;
@@ -10,6 +11,8 @@ public class ButtonPushClick : MonoBehaviour
     public SonidosInicio Manager;
     public float MinLocalY = 0.25f;
     public float MaxLocalY = 0.55f;
+    public int Escena;
+    
   
     public bool isBeingTouched = false;
     public bool isClicked = false;
@@ -56,6 +59,7 @@ public class ButtonPushClick : MonoBehaviour
         GetComponent<Collider>().isTrigger = true;
         Manager.ActivarSonidos(Objetos);
         Manager.StartCoroutine(Manager.ChangeSpeed(0f, 1f, 10f, Manager.combos[Bases].sonido));
+        SceneManager.LoadScene(Escena);
     }
 
 
