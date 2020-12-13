@@ -363,7 +363,7 @@ public class OVRPlayerController : MonoBehaviour
 
 			if (OVRInput.Get(OVRInput.Button.Four))
 			{
-				SceneManager.LoadScene(1);
+				SceneManager.LoadScene(0);
 			}
 
 
